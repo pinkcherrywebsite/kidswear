@@ -30,10 +30,10 @@ const sampleProducts = [
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
-    const { slug } = params;
+    const { slug } = await params;
 
     // Find product by slug
     const product = sampleProducts.find((p) => p.slug === slug);

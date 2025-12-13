@@ -5,7 +5,7 @@
 
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { ShoppingCart, Heart, Truck, Shield, RotateCcw } from 'lucide-react';
@@ -27,11 +27,7 @@ export default function ProductDetailPage() {
 
   const addItem = useCartStore((state) => state.addItem);
 
-  useEffect(() => {
-    fetchProduct();
-  }, [slug]);
-
-  const fetchProduct = async () => {
+  const fetchProduct = useCallback(async () => {
     try {
       setLoading(true);
       const res = await fetch(`/api/products/${slug}`);
@@ -52,7 +48,11 @@ export default function ProductDetailPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [slug]);
+
+  useEffect(() => {
+    fetchProduct();
+  }, [fetchProduct]);
 
   const handleAddToCart = () => {
     if (product && selectedSize && selectedColor) {

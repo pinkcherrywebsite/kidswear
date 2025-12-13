@@ -60,7 +60,7 @@ export default function CategoriesPage() {
         <h1 className="text-4xl font-bold mb-4">Shop by Category</h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           Explore our wide range of kids wear organized by category. Find
-          exactly what you're looking for!
+          exactly what you&apos;re looking for!
         </p>
       </div>
 
@@ -100,7 +100,7 @@ export default function CategoriesPage() {
 
       {/* CTA Section */}
       <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold mb-4">Can't find what you're looking for?</h2>
+        <h2 className="text-2xl font-bold mb-4">Can&apos;t find what you&apos;re looking for?</h2>
         <p className="text-gray-600 mb-6">
           Browse all our products or contact us for assistance
         </p>

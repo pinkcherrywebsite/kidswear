@@ -46,7 +46,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   Today, Pink Cherry continues to bring joy to families across
-                  the country, one outfit at a time. We're committed to making
+                  the country, one outfit at a time. We&apos;re committed to making
                   shopping for kids wear a delightful experience for everyone.
                 </p>
               </div>
@@ -84,7 +84,7 @@ export default function AboutPage() {
               </div>
               <h3 className="font-semibold text-lg mb-2">Affordable Prices</h3>
               <p className="text-sm text-gray-600">
-                Quality doesn't have to break the bank. We offer competitive
+                Quality doesn&apos;t have to break the bank. We offer competitive
                 prices for all families.
               </p>
             </div>
@@ -94,7 +94,7 @@ export default function AboutPage() {
               </div>
               <h3 className="font-semibold text-lg mb-2">Customer Care</h3>
               <p className="text-sm text-gray-600">
-                Your satisfaction is our priority. We're here to help whenever
+                Your satisfaction is our priority. We&apos;re here to help whenever
                 you need us.
               </p>
             </div>

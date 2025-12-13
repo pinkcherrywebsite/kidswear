@@ -44,8 +44,8 @@ export default function ContactPage() {
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Have a question or need assistance? We'd love to hear from you. Send
-          us a message and we'll respond as soon as possible.
+          Have a question or need assistance? We&apos;d love to hear from you. Send
+          us a message and we&apos;ll respond as soon as possible.
         </p>
       </div>
 
@@ -133,7 +133,7 @@ export default function ContactPage() {
 
             {submitted && (
               <div className="bg-green-50 border border-green-200 text-green-600 px-4 py-3 rounded-lg mb-6">
-                Thank you for your message! We'll get back to you soon.
+                Thank you for your message! We&apos;ll get back to you soon.
               </div>
             )}
 
