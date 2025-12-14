@@ -29,8 +29,11 @@ export default function CheckoutPage() {
     pincode: '',
   });
 
-  // Load Razorpay script
+  const [isMounted, setIsMounted] = useState(false);
+
   useEffect(() => {
+    setIsMounted(true);
+    // Load Razorpay script
     const script = document.createElement('script');
     script.src = 'https://checkout.razorpay.com/v1/checkout.js';
     script.async = true;
@@ -43,7 +46,12 @@ export default function CheckoutPage() {
     };
   }, []);
 
-  // Redirect if cart is empty
+  // Prevent SSR
+  if (!isMounted) {
+    return null;
+  }
+
+  // Redirect if cart is empty (run only after mount)
   if (items.length === 0) {
     router.push('/cart');
     return null;

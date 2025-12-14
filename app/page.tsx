@@ -10,14 +10,12 @@ import ProductCard from '@/components/ProductCard';
 import { Product } from '@/lib/types';
 
 // Fetch products on the server
+import { getProducts } from '@/lib/data/products';
+
+// Fetch products directly on the server
 async function getFeaturedProducts(): Promise<Product[]> {
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/api/products?featured=true&limit=6`,
-      { cache: 'no-store' }
-    );
-    const data = await res.json();
-    return data.data || [];
+    return await getProducts({ featured: true, limit: 6 });
   } catch (error) {
     console.error('Failed to fetch products:', error);
     return [];
